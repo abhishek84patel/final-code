@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draggable Box</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+
+<body>
+    <div class="line"></div>
+    <div style="display: flex;" class="dragcontainer">
+        <div class="draggable f1">
+            <svg class="box-svg" width="100%" height="100%" viewBox="0 0 700 724" fill="none"
+                xmlns="http://www.w3.org/2000/svg" style="
+                position: absolute;
+                left: 0;
+                scale: 1.1;
+                top: 15px;
+                height: 100%;
+                ">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M424.077 153.084H290.532C285.93 150.121 281.58 146.95 277.661 143.583H428.913C427.225 147.053 425.605 150.264 424.077 153.084ZM250 98.1947C252.01 100.779 253.803 103.487 255.324 106.319L348.37 65.2468L445.601 108.16C447.044 105.2 448.482 102.323 449.904 99.5891L353.35 56.9715V47.3216C364.898 45.0912 373.437 35.2536 373.437 23.8975C373.437 10.7198 362.193 -0.00153653 348.371 1.6517e-07C334.55 1.6517e-07 323.306 10.7198 323.306 23.899C323.306 26.5198 325.54 28.6518 328.285 28.6518C331.03 28.6518 333.263 26.5199 333.263 23.899C333.263 15.9613 340.04 9.5039 348.371 9.5039C356.701 9.5039 363.479 15.9613 363.479 23.899C363.479 31.8368 356.703 38.2942 348.371 38.2942C345.626 38.2942 343.393 40.4245 343.393 43.0454V56.9734L250 98.1947Z"
+                    fill="#333439"></path>
+            </svg>
+        </div>
+        <div class="draggable" style="left: 250px;">
+            <svg class="box-svg" width="100%" height="100%" viewBox="0 0 700 724" fill="none"
+                xmlns="http://www.w3.org/2000/svg" style="
+                position: absolute;
+                left: 0;
+                scale: 1.1;
+                top: 15px;
+                height: 100%;
+                ">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M424.077 153.084H290.532C285.93 150.121 281.58 146.95 277.661 143.583H428.913C427.225 147.053 425.605 150.264 424.077 153.084ZM250 98.1947C252.01 100.779 253.803 103.487 255.324 106.319L348.37 65.2468L445.601 108.16C447.044 105.2 448.482 102.323 449.904 99.5891L353.35 56.9715V47.3216C364.898 45.0912 373.437 35.2536 373.437 23.8975C373.437 10.7198 362.193 -0.00153653 348.371 1.6517e-07C334.55 1.6517e-07 323.306 10.7198 323.306 23.899C323.306 26.5198 325.54 28.6518 328.285 28.6518C331.03 28.6518 333.263 26.5199 333.263 23.899C333.263 15.9613 340.04 9.5039 348.371 9.5039C356.701 9.5039 363.479 15.9613 363.479 23.899C363.479 31.8368 356.703 38.2942 348.371 38.2942C345.626 38.2942 343.393 40.4245 343.393 43.0454V56.9734L250 98.1947Z"
+                    fill="#333439"></path>
+            </svg>
+        </div>
+        <div class="draggable" style="left: 500px;">
+            <svg class="box-svg" width="100%" height="100%" viewBox="0 0 700 724" fill="none"
+                xmlns="http://www.w3.org/2000/svg" style="
+                position: absolute;
+                left: 0;
+                scale: 1.1;
+                top: 15px;
+                height: 100%;
+                ">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M424.077 153.084H290.532C285.93 150.121 281.58 146.95 277.661 143.583H428.913C427.225 147.053 425.605 150.264 424.077 153.084ZM250 98.1947C252.01 100.779 253.803 103.487 255.324 106.319L348.37 65.2468L445.601 108.16C447.044 105.2 448.482 102.323 449.904 99.5891L353.35 56.9715V47.3216C364.898 45.0912 373.437 35.2536 373.437 23.8975C373.437 10.7198 362.193 -0.00153653 348.371 1.6517e-07C334.55 1.6517e-07 323.306 10.7198 323.306 23.899C323.306 26.5198 325.54 28.6518 328.285 28.6518C331.03 28.6518 333.263 26.5199 333.263 23.899C333.263 15.9613 340.04 9.5039 348.371 9.5039C356.701 9.5039 363.479 15.9613 363.479 23.899C363.479 31.8368 356.703 38.2942 348.371 38.2942C345.626 38.2942 343.393 40.4245 343.393 43.0454V56.9734L250 98.1947Z"
+                    fill="#333439"></path>
+            </svg>
+        </div>
+        <div class="draggable" style="left: 700px;">
+            <svg class="box-svg" width="100%" height="100%" viewBox="0 0 700 724" fill="none"
+                xmlns="http://www.w3.org/2000/svg" style="
+                position: absolute;
+                left: 0;
+                scale: 1.1;
+                top: 15px;
+                height: 100%;
+                ">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M424.077 153.084H290.532C285.93 150.121 281.58 146.95 277.661 143.583H428.913C427.225 147.053 425.605 150.264 424.077 153.084ZM250 98.1947C252.01 100.779 253.803 103.487 255.324 106.319L348.37 65.2468L445.601 108.16C447.044 105.2 448.482 102.323 449.904 99.5891L353.35 56.9715V47.3216C364.898 45.0912 373.437 35.2536 373.437 23.8975C373.437 10.7198 362.193 -0.00153653 348.371 1.6517e-07C334.55 1.6517e-07 323.306 10.7198 323.306 23.899C323.306 26.5198 325.54 28.6518 328.285 28.6518C331.03 28.6518 333.263 26.5199 333.263 23.899C333.263 15.9613 340.04 9.5039 348.371 9.5039C356.701 9.5039 363.479 15.9613 363.479 23.899C363.479 31.8368 356.703 38.2942 348.371 38.2942C345.626 38.2942 343.393 40.4245 343.393 43.0454V56.9734L250 98.1947Z"
+                    fill="#333439"></path>
+            </svg>
+        </div>
+        <div class="draggable last">
+            <svg class="box-svg" width="100%" height="100%" viewBox="0 0 700 724" fill="none"
+                xmlns="http://www.w3.org/2000/svg" style="
+                position: absolute;
+                left: 0;
+                scale: 1.1;
+                top: 15px;
+                height: 100%;
+                ">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M424.077 153.084H290.532C285.93 150.121 281.58 146.95 277.661 143.583H428.913C427.225 147.053 425.605 150.264 424.077 153.084ZM250 98.1947C252.01 100.779 253.803 103.487 255.324 106.319L348.37 65.2468L445.601 108.16C447.044 105.2 448.482 102.323 449.904 99.5891L353.35 56.9715V47.3216C364.898 45.0912 373.437 35.2536 373.437 23.8975C373.437 10.7198 362.193 -0.00153653 348.371 1.6517e-07C334.55 1.6517e-07 323.306 10.7198 323.306 23.899C323.306 26.5198 325.54 28.6518 328.285 28.6518C331.03 28.6518 333.263 26.5199 333.263 23.899C333.263 15.9613 340.04 9.5039 348.371 9.5039C356.701 9.5039 363.479 15.9613 363.479 23.899C363.479 31.8368 356.703 38.2942 348.371 38.2942C345.626 38.2942 343.393 40.4245 343.393 43.0454V56.9734L250 98.1947Z"
+                    fill="#333439"></path>
+            </svg>
+        </div>
+    </div>
+
+    <style>
+        .line {
+            width: 100%;
+            height: 10px;
+            background-color: #333439;
+        }
+
+        .last {
+            right: -500px;
+            transition: all ease 500ms;
+        }
+
+        .f1 {
+            left: -500px;
+            transition: all ease 500ms;
+        }
+
+        .draggable {
+            width: 335px;
+            height: 335px;
+            background: url(https://depextechnologies.org/SakiILIC/wp-content/uploads/2016/09/saki-tshirt-removebg-preview.png);
+            background-repeat: no-repeat;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            position: absolute;
+            user-select: none;
+            cursor: move;
+            background-size: contain;
+            top: 8px;
+        }
+    </style>
+
+    <script>
+        setTimeout(() => {
+            document.querySelector('.last').style.right = '0';
+            document.querySelector('.f1').style.left = '0';
+        }, 500);
+
+        const draggableElements = document.querySelectorAll('.draggable');
+        const dragArea = document.querySelector('.dragcontainer');
+
+        draggableElements.forEach((draggableElement) => {
+            let offsetX, isDragging = false;
+
+            // Mouse events
+            draggableElement.addEventListener('mousedown', (event) => {
+                isDragging = true;
+                offsetX = event.clientX - draggableElement.getBoundingClientRect().left;
+            });
+
+            document.addEventListener('mousemove', (event) => {
+                if (isDragging) {
+                    const x = event.clientX - offsetX - dragArea.getBoundingClientRect().left;
+                    draggableElement.style.left = `${x}px`;
+                }
+            });
+
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+
+            // Touch events
+            draggableElement.addEventListener('touchstart', (event) => {
+                isDragging = true;
+                offsetX = event.touches[0].clientX - draggableElement.getBoundingClientRect().left;
+            });
+
+            document.addEventListener('touchmove', (event) => {
+                if (isDragging) {
+                    const x = event.touches[0].clientX - offsetX - dragArea.getBoundingClientRect().left;
+                    draggableElement.style.left = `${x}px`;
+                }
+            });
+
+            document.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+        });
+    </script>
+</body>
+
+</html>
