@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Draggable Box</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+
 </head>
 
 <body>
@@ -90,15 +90,6 @@
             background-color: #333439;
         }
 
-        .last {
-            right: -500px;
-            transition: all ease 500ms;
-        }
-
-        .f1 {
-            left: -500px;
-            transition: all ease 500ms;
-        }
 
         .draggable {
             width: 335px;
@@ -115,8 +106,64 @@
             top: 8px;
         }
     </style>
-
     <script>
+
+
+        const draggableElements = document.querySelectorAll('.draggable');
+        const dragArea = document.querySelector('.dragcontainer');
+
+        draggableElements.forEach((draggableElement) => {
+            let offsetX, isDragging = false;
+
+            // Mouse events
+            draggableElement.addEventListener('mousedown', (event) => {
+                isDragging = true;
+                offsetX = event.clientX - draggableElement.getBoundingClientRect().left;
+            });
+
+            document.addEventListener('mousemove', (event) => {
+                if (isDragging) {
+                    let x = event.clientX - offsetX - dragArea.getBoundingClientRect().left;
+                    // Boundary check
+                    if (x < 0) {
+                        x = 0;
+                    } else if (x > dragArea.offsetWidth - draggableElement.offsetWidth) {
+                        x = dragArea.offsetWidth - draggableElement.offsetWidth;
+                    }
+                    draggableElement.style.left = `${x}px`;
+                }
+            });
+
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+
+            // Touch events
+            draggableElement.addEventListener('touchstart', (event) => {
+                isDragging = true;
+                offsetX = event.touches[0].clientX - draggableElement.getBoundingClientRect().left;
+            });
+
+            document.addEventListener('touchmove', (event) => {
+                if (isDragging) {
+                    let x = event.touches[0].clientX - offsetX - dragArea.getBoundingClientRect().left;
+                    // Boundary check
+                    if (x < 0) {
+                        x = 0;
+                    } else if (x > dragArea.offsetWidth - draggableElement.offsetWidth) {
+                        x = dragArea.offsetWidth - draggableElement.offsetWidth;
+                    }
+                    draggableElement.style.left = `${x}px`;
+                }
+            });
+
+            document.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+        });
+    </script>
+
+    <!-- <script>
         setTimeout(() => {
             document.querySelector('.last').style.right = '0';
             document.querySelector('.f1').style.left = '0';
@@ -145,12 +192,12 @@
                 isDragging = false;
             });
 
-            // Touch events
+            
             draggableElement.addEventListener('touchstart', (event) => {
                 isDragging = true;
                 offsetX = event.touches[0].clientX - draggableElement.getBoundingClientRect().left;
-            });
-
+            }); 
+ 
             document.addEventListener('touchmove', (event) => {
                 if (isDragging) {
                     const x = event.touches[0].clientX - offsetX - dragArea.getBoundingClientRect().left;
@@ -162,7 +209,7 @@
                 isDragging = false;
             });
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
